@@ -5,3 +5,19 @@
 .thingaha-footer-logo {
   width: 260px;
 }
+
+.thingaha-member-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.thingaha-member-detail-card {
+  height: 400px;
+}
+
+
+/* footer */
+.thingaha-copy-right {
+  margin-bottom: 2rem;
+}
