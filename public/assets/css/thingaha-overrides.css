@@ -16,6 +16,15 @@
   height: 400px;
 }
 
+#scroll-top-button {
+  display: none;
+  position: fixed;
+  bottom: 26px;
+  right: 39px;
+  z-index: 98;
+  padding: 1rem;
+}
+
 
 /* footer */
 .thingaha-copy-right {
