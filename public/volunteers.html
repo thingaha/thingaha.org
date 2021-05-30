@@ -92,11 +92,10 @@
           <div class="row">
             <div class="col-lg-7 mx-auto text-center my-5">
               <h6 class="fw-light fs-3 fs-lg-5 lh-sm mb-4">
-                Management Team  Or တခုခု team
+                Volunteers
               </h6>
               <p class="mb-3">
-                လက်ရှိ ‌ဘုန်းတော်ကြီးသင်ပညာရေးကျောင်း များဆီ ။ အထောက်ပံရအောင်ဘာညာ။
-                ငွေလွဲထုတ် စီမံဘာညာ။ Management Team ရဲ့ အဓီက လုပ်ဆောင်တာတွေကတော့ ဘာညာ ဘာညာ။
+                Volunteers from Japan, Myanmar and Singapore contributed to our Thingaha website and application development.
               </p>
             </div>
           </div>
@@ -175,30 +174,122 @@
     <script src="assets/js/thingaha-customs.js"></script>
     <script>
       var items = [
-        ['Ye Khaung', 'Myanmar', 'yao-ming.jpg'],
-        ['Sis Min Maw', 'Japan', 'yao-ming.jpg'],
-        ['Naing Aung Phyo', 'Japan', 'yao-ming.jpg'],
-        ['Yee Mon Aung', 'Myanmar', 'yao-ming.jpg'],
-        ['Ei Thingyan Moe', 'Myanmar', 'yao-ming.jpg'],
-        ['Min Thiri', 'Myanmar', 'yao-ming.jpg'],
-        ['Khine Wai Oo', 'Myanmar', 'yao-ming.jpg'],
-        ['Pin Maing Soe', 'Myanmar', 'yao-ming.jpg'],
-        ['Thandar Khine Aye', 'Japan', 'yao-ming.jpg'],
-        ['Inzali Naing', 'Myanmar', 'yao-ming.jpg'],
-        ['Khine Khine Kyaw', 'Myanmar', 'yao-ming.jpg'],
-        ['Su Thwe Thwe Tun', 'Myanmar', 'yao-ming.jpg'],
-        ['Thiha Aye Kyaw', 'Myanmar', 'yao-ming.jpg'],
+        {
+          name: 'Khine Zar Thwe',
+          country: 'Japan',
+          filename: 'khine_zar_thwe.jpg',
+          githubUrl: 'https://github.com/khinezarthwe'
+        },
+        {
+          name: 'Chan Myae San Hlaing',
+          country: 'Japan',
+          filename: 'chan_myae_san_hlaing.jpg',
+          githubUrl: 'https://github.com/dreamingblackcat'
+        },
+        {
+          name: 'Ye Khaung',
+          country: 'Myanmar',
+          filename: 'ye_khaung.jpg',
+          githubUrl: 'https://github.com/yekhaung'
+        },
+        {
+          name: 'Sis Min Maw',
+          country: 'Japan',
+          filename: 'sis_minn_maw.jpg',
+          githubUrl: 'https://github.com/sisminnmaw'
+        },
+        {
+          name: 'Naing Aung Phyo',
+          country: 'Japan',
+          filename: 'naing_aung_phyo.jpg',
+          githubUrl: 'https://github.com/naingaungphyo'
+        },
+        {
+          name: 'Yee Mon Aung',
+          country: 'Japan',
+          filename: 'yee_mon_aung.jpg',
+          githubUrl: 'https://github.com/yeemon04'
+        },
+        {
+          name: 'Ei Thingyan Moe',
+          country: 'Japan',
+          filename: 'ei_thingyan_moe.jpg',
+          githubUrl: 'https://github.com/EiThingyanMoe'
+        },
+        {
+          name: 'Min Thiri',
+          country: 'Myanmar',
+          filename: 'minn_thiri.png',
+          githubUrl: "https://github.com/MinnThiri"
+        },
+        {
+          name: 'Khine Wai Oo',
+          country: 'Myanmar',
+          filename: 'khine_wai_oo.jpg',
+          githubUrl: 'https://github.com/KhineWai710'
+        },
+        {
+          name: 'Pin Maing Soe',
+          country: 'Myanmar',
+          filename: 'pin_maing_soe.jpg',
+          githubUrl: 'https://github.com/pinmaing'
+        },
+        {
+          name: 'Thandar Khine Aye',
+          country: 'Japan',
+          filename: 'thandar_khine_aye.jpg',
+          githubUrl: 'https://github.com/thandarkhineaye'
+        },
+        {
+          name: 'Inzali Naing',
+          country: 'Myanmar',
+          filename: 'inzali_naing.png',
+          githubUrl: 'https://github.com/InzaliNaing'
+        },
+        {
+          name: 'Khine Khine Kyaw',
+          country: 'Myanmar',
+          filename: 'khine_khine_kyaw.jpg',
+          githubUrl: 'https://github.com/KhineKhineKyaw'
+        },
+        {
+          name: 'Mya Maw Swe',
+          country: 'Japan',
+          filename: 'mya_maw_swe.jpg',
+          githubUrl: 'https://github.com/myamaw'
+        },
+        {
+          name: 'Su Thwe Thwe Tun',
+          country: 'Singapore',
+          filename: 'su_thwe_thwe_tun.jpg',
+          githubUrl: 'https://github.com/SuThwe'
+        },
+        {
+          name: 'Thiha Aye Kyaw',
+          country: 'Myanmar',
+          filename: 'thiha_aye_kyaw.jpg',
+          githubUrl: 'https://github.com/frozencity'
+        },
+        {
+          name: 'Hnin Oo Wai Hlaing',
+          country: 'Myanmar',
+          filename: 'hnin_oo_wai_hlaing.jpg',
+          githubUrl: 'https://www.facebook.com/moe.thae.393'
+        }
       ]
+
       let content = '';
-      items.forEach(p => {
+      items.forEach(contributor => {
         content += `
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4 p-2">
               <div class="card h-100 shadow card-span p-1">
                 <div class="card-body p-2">
-                  <div class="d-flex align-items-center"><img class="img-fluid thingaha-volunteer-img" src="assets/img/gallery/volunteers/${p[2]}" alt="testimonials" />
+                  <div class="d-flex align-items-center"><img class="img-fluid thingaha-volunteer-img" src="assets/img/gallery/volunteers/${contributor.filename}" alt="testimonials" />
                     <div class="flex-1 ms-4 ms-md-2">
-                      <p class="card-text text-black fs--1 m-0">${p[0]}</p>
-                      <p class="card-text fs--1 m-0">${p[1]}</p>
+                      <p class="card-text text-black fs--1 m-0">
+                        <a href=${contributor.githubUrl}>${contributor.name}</a>
+                      </p>
+                      <p class="card-text fs--1 m-0">${contributor.country}</p>
                     </div>
                   </div>
                 </div>
