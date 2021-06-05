@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Students</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favicons/favicon_32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/img/favicons/favicon_16x16.png"
+    />
+    <link rel="manifest" href="assets/img/favicons/manifest.json" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="assets/img/favicons/mstile-150x150.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="assets/css/thingaha-overrides.css" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <!-- Scroll Top Float button Start-->
+    <button id="scroll-top-button" class="btn btn-outline-primary btn-light rounded-circle" title="Go to top">Top</button>
+    <!-- Scroll Top Float button End-->
+
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <nav
+        class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+        data-navbar-on-scroll="data-navbar-on-scroll"
+      >
+        <div class="container">
+          <a
+            class="navbar-brand d-flex align-items-center fw-semi-bold fs-3"
+            href="index.html"
+          >
+            <img
+              class="me-3 thingaha-logo"
+              src="assets/img/gallery/logo.png"
+              alt=""
+            />
+          </a>
+          <div class="justify-content-end" id="navbarSupportedContent">
+            <a
+              class="btn btn-outline-primary order-0"
+              href="index.html#missions"
+              type="submit"
+              >Back</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="bg-100">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 mx-auto text-center my-5">
+              <h6 class="fw-light fs-3 fs-lg-5 lh-sm mb-4">
+                students
+              </h6>
+              <p class="mb-3">
+                Volunteers from Japan, Myanmar and Singapore contributed to our Thingaha website and application development.
+              </p>
+            </div>
+          </div>
+          
+          <div class="row flex-center h-100">
+            <div class="col-xl-9">
+              <canvas id="students-list"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section>
+        <div class="container">
+          <div class="row flex-center h-100">
+            <div class="col-xl-9">
+              <div class="row justify-content-center">
+
+                <div class="col-6">
+                  <canvas id="students-chart-current" width="400" height="400"></canvas>
+                </div>
+                <div class="col-6">
+                  <canvas id="students-chart-alltime" width="400" height="400"></canvas>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+  
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-0 bg-primary">
+        <div class="container">
+          <div class="row justify-content-between pb-2 pt-4">
+            <div class="col-12 col-lg-auto mb-5 mb-lg-0">
+              <a class="d-flex align-items-center fw-semi-bold fs-3" href="#">
+                <img
+                  class="me-3 thingaha-footer-logo"
+                  src="assets/img/gallery/footer-logo.png"
+                  alt="..."
+              /></a>
+            </div>
+            <div class="col-auto mb-4 d-flex align-items-end">
+              <ul class="list-unstyled list-inline mb-0">
+                <li class="list-inline-item me-3"><a class="text-decoration-none" href="https://www.facebook.com/thingahacharity" target="_blank">
+                    <svg class="bi bi-facebook" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 16 16">
+                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"> </path>
+                    </svg></a></li>
+                <li class="list-inline-item me-3"><a href="https://www.linkedin.com/company/thingaha" target="_blank">
+                    <svg class="bi bi-linkedin" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 16 16">
+                      <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                    </svg></a></li>
+                <li class="list-inline-item me-3"><a href="https://github.com/thingaha/thingaha-web/wiki" target="_blank">
+                    <svg class="bi bi-github" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 16 16">
+                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-auto mb-2">
+              <h3 class="mb-0 fs--1 my-2 text-100 thingaha-copy-right">
+                &copy; Thingaha
+              </h3>
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="vendors/@popperjs/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="assets/js/thingaha-customs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js" integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      //Student list
+      var ctx_list = document.getElementById('students-list');
+      const labels = ['2019', '2020', '2021'];
+      var chart_current = new Chart(ctx_list, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: 'Grade 9',
+              data: [50, 60, 70],
+              backgroundColor: 'rgba(255, 99, 132, 1)',
+            },
+            {
+              label: 'Grade 10',
+              data: [20, 30, 70],
+              backgroundColor: 'rgba(255, 0, 132, 1)',
+            },
+            {
+              label: 'Grade 11',
+              data: [90, 10, 100],
+              backgroundColor: 'rgba(0, 99, 132, 1)',
+            }
+          ]
+        },
+
+        options: {
+          indexAxis: 'y',
+          // Elements options apply to all of the options unless overridden in a dataset
+          // In this case, we are setting the border of each horizontal bar to be 2px wide
+          elements: {
+            bar: {
+              borderWidth: 2,
+            }
+          },
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'right',
+            },
+            title: {
+              display: true,
+              text: 'နှစ်အလိုက် ကျောင်းသားထောက်ပံ့မှုစာရင်း'
+            }
+          }
+        },
+      });
+
+      //Current Student list - Start
+      //data setting
+      var current_gender =
+        {
+          title: 'Current Students list',
+          labels: ['girls 100', 'boys 200'],
+          data: [100, 200]
+        };
+
+      var ctx_current = document.getElementById('students-chart-current');
+      var chart_current = new Chart(ctx_current, {
+        type: 'doughnut',
+        data: {
+          labels: current_gender.labels,
+          datasets: [
+            {
+              label: current_gender.title,
+              data: current_gender.data,
+              backgroundColor: [
+                'rgba(0, 185, 0, 1)',
+                'rgba(250, 250, 250, 1)'
+              ],
+              borderColor: [
+                'rgba(0, 185, 0, 1)',
+                'rgba(0, 185, 0, 1)'
+              ]
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: current_gender.title,
+            }
+          }
+        }
+      });
+      //Current Student list - End
+
+      //All-time Student list - Start
+      //data setting
+      var alltime_gender =
+        {
+          title: 'Alltime Students list',
+          labels: ['girls 100', 'boys 200'],
+          data: [100, 200]
+        };
+      var ctx_alltime = document.getElementById('students-chart-alltime');
+      var chart_alltime = new Chart(ctx_alltime, {
+        type: 'pie',
+        data: {
+          labels: alltime_gender.labels,
+          datasets: [
+            {
+              label: alltime_gender.title,
+              data: alltime_gender.data,
+              backgroundColor: [
+                'rgba(0, 185, 0, 1)',
+                'rgba(250, 250, 250, 1)'
+              ],
+              borderColor: [
+                'rgba(0, 185, 0, 1)',
+                'rgba(0, 185, 0, 1)'
+              ]
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: alltime_gender.title
+            }
+          }
+        }
+      });
+      //All-time Student list - End
+
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+  </body>
+</html>
