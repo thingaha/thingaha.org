@@ -95,14 +95,26 @@
                 students
               </h6>
               <p class="mb-3">
-                Volunteers from Japan, Myanmar and Singapore contributed to our Thingaha website and application development.
+                ကျောင်းသား ၁၄၉ယောက်ကို ထောက်ပံ့ထားပြီးတော့ ဘာညာဘာညာ.
               </p>
             </div>
           </div>
           
           <div class="row flex-center h-100">
             <div class="col-xl-9">
-              <canvas id="students-list"></canvas>
+              <div class="row justify-content-center">
+
+                <div class="col-sm-6">
+                  <canvas id="students-list-year" ></canvas>
+                </div>
+                <div class="col-sm-6 mx-auto text-center">
+                  <p>Location</p>
+                  <p class="fs--1 m-0 mb-1">အများစု က ညောင်တုန်းကဖြစ်ပြီးတော့ ဘာညာဘာညာ</p>
+                  <div class="iframe-container">
+                    <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30517.05034882036!2d95.62557908544736!3d17.041746181801972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c051f4247f897f%3A0xa7c01a9bc8fbde!2sNyaungdon%2C%20Myanmar%20(Burma)!5e0!3m2!1sen!2sjp!4v1623117741308!5m2!1sen!2sjp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -113,17 +125,32 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section>
+        <section>
+          <div class="container">
+            <div class="row flex-center h-100">
+              <div class="col-xl-9">
+                <canvas id="students-list-grade" height="250"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- end of .container-->
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+    
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="bg-100">
         <div class="container">
           <div class="row flex-center h-100">
             <div class="col-xl-9">
               <div class="row justify-content-center">
 
                 <div class="col-6">
-                  <canvas id="students-chart-current" width="400" height="400"></canvas>
+                  <canvas id="students-chart-current" width="400" height="300"></canvas>
                 </div>
                 <div class="col-6">
-                  <canvas id="students-chart-alltime" width="400" height="400"></canvas>
+                  <canvas id="students-chart-alltime" width="400" height="300"></canvas>
                 </div>
 
               </div>
@@ -194,51 +221,110 @@
     <script src="assets/js/thingaha-customs.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js" integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-      //Student list
-      var ctx_list = document.getElementById('students-list');
-      const labels = ['2019', '2020', '2021'];
-      var chart_current = new Chart(ctx_list, {
-        type: 'bar',
+      const CHART_COLORS = {
+        red: 'rgb(255, 99, 132)',
+        orange: 'rgb(255, 159, 64)',
+        yellow: 'rgb(255, 205, 86)',
+        green: 'rgb(75, 192, 192)',
+        blue: 'rgb(54, 162, 235)',
+        purple: 'rgb(153, 102, 255)',
+        grey: 'rgb(201, 203, 207)'
+      };
+
+      const yearLabels = ['2016-2017', '2017-2018', '2018-2019', '2019-2020', '2020-2021'];
+
+      //Student list year
+      var ctx_list_year = document.getElementById('students-list-year');
+      var chart_list_year = new Chart(ctx_list_year, {
+        type: 'line',
         data: {
-          labels: labels,
+          labels: yearLabels,
           datasets: [
             {
-              label: 'Grade 9',
-              data: [50, 60, 70],
-              backgroundColor: 'rgba(255, 99, 132, 1)',
-            },
-            {
-              label: 'Grade 10',
-              data: [20, 30, 70],
-              backgroundColor: 'rgba(255, 0, 132, 1)',
-            },
-            {
-              label: 'Grade 11',
-              data: [90, 10, 100],
-              backgroundColor: 'rgba(0, 99, 132, 1)',
+              label: 'ကျောင်းသားအရေအတွက်',
+              data: [22, 25, 23, 29, 50],
+              backgroundColor: 'rgba(75, 192, 192, 0.5)',
+              borderColor: CHART_COLORS.green,
+              fill: true
             }
           ]
         },
-
         options: {
-          indexAxis: 'y',
-          // Elements options apply to all of the options unless overridden in a dataset
-          // In this case, we are setting the border of each horizontal bar to be 2px wide
-          elements: {
-            bar: {
-              borderWidth: 2,
-            }
-          },
           responsive: true,
           plugins: {
             legend: {
-              position: 'right',
+              position: 'top',
             },
             title: {
               display: true,
-              text: 'နှစ်အလိုက် ကျောင်းသားထောက်ပံ့မှုစာရင်း'
+              text: 'နှစ်အလိုက် စုစုပေါင်းကျောင်းသားထောက်ပံ့မှုစာရင်း'
+            },
+            filler: {
+              propagate: false,
             }
+          },
+          interaction: {
+            intersect: false,
           }
+        },
+      });
+
+      //Student list grade
+      var ctx_list_grade = document.getElementById('students-list-grade');
+      var chart_list_grade = new Chart(ctx_list_grade, {
+        type: 'bar',
+        data: {
+          labels: yearLabels,
+          datasets: [
+            {
+              label: 'Grade 10',
+              data: [13, 13, 10, 8, 30],
+              backgroundColor: CHART_COLORS.red,
+            },
+            {
+              label: 'Grade 9',
+              data: [1, 6, 7, 10, ],
+              backgroundColor: CHART_COLORS.orange,
+            },
+            {
+              label: 'Grade 8',
+              data: [2, 3, 4, 8, 8],
+              backgroundColor: CHART_COLORS.yellow,
+            },
+            {
+              label: 'Grade 7',
+              data: [3, 1, 1, 2, 9],
+              backgroundColor: CHART_COLORS.green,
+            },
+            {
+              label: 'Grade 6',
+              data: [1, 1, 1, 1, 2],
+              backgroundColor: CHART_COLORS.blue,
+            },
+            {
+              label: 'Grade 5',
+              data: [1, 1, , , ],
+              backgroundColor: CHART_COLORS.purple,
+            },
+            {
+              label: 'Grade 4',
+              data: [1, , , , 1],
+              backgroundColor: CHART_COLORS.grey,
+            }
+          ]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: 'အတန်းအလိုက် ကျောင်းသားထောက်ပံ့မှုစာရင်း'
+            }
+          },
         },
       });
 
@@ -247,8 +333,8 @@
       var current_gender =
         {
           title: 'Current Students list',
-          labels: ['girls 100', 'boys 200'],
-          data: [100, 200]
+          labels: ['girls', 'boys'],
+          data: [33, 27]
         };
 
       var ctx_current = document.getElementById('students-chart-current');
@@ -261,13 +347,13 @@
               label: current_gender.title,
               data: current_gender.data,
               backgroundColor: [
-                'rgba(0, 185, 0, 1)',
-                'rgba(250, 250, 250, 1)'
+                CHART_COLORS.red,
+                CHART_COLORS.blue
               ],
-              borderColor: [
-                'rgba(0, 185, 0, 1)',
-                'rgba(0, 185, 0, 1)'
-              ]
+              // borderColor: [
+              //   'rgba(0, 185, 0, 1)',
+              //   'rgba(0, 185, 0, 1)'
+              // ]
             }
           ]
         },
@@ -291,8 +377,8 @@
       var alltime_gender =
         {
           title: 'Alltime Students list',
-          labels: ['girls 100', 'boys 200'],
-          data: [100, 200]
+          labels: ['girls', 'boys'],
+          data: [98, 61]
         };
       var ctx_alltime = document.getElementById('students-chart-alltime');
       var chart_alltime = new Chart(ctx_alltime, {
@@ -304,13 +390,13 @@
               label: alltime_gender.title,
               data: alltime_gender.data,
               backgroundColor: [
-                'rgba(0, 185, 0, 1)',
-                'rgba(250, 250, 250, 1)'
+                CHART_COLORS.red,
+                CHART_COLORS.blue
               ],
-              borderColor: [
-                'rgba(0, 185, 0, 1)',
-                'rgba(0, 185, 0, 1)'
-              ]
+              // borderColor: [
+              //   'rgba(0, 185, 0, 1)',
+              //   'rgba(0, 185, 0, 1)'
+              // ]
             }
           ]
         },
