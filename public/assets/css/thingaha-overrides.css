@@ -18,8 +18,26 @@
   border-radius: 50%;
 }
 
+.thingaha-period-subtitle {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.thingaha-period-text {
+  font-size: 1rem;
+}
+
 .thingaha-member-detail-card {
   height: 400px;
+}
+
+.green-num {
+  color: #00B900;
+  font-size: 1.3em;
+}
+
+.sub-heading-color {
+  color: #11c50e;
 }
 
 #scroll-top-button {
@@ -35,4 +53,63 @@
 /* footer */
 .thingaha-copy-right {
   margin-bottom: 2rem;
+}
+
+/* font-awesome */
+.class::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f007";
+}
+
+.mw-25 {
+  max-width: 25vh;
+}
+
+.mw-50 {
+  max-width: 50vh;
+}
+
+/* font 3times */
+.font-x3 {
+  font-size: 3.5rem;
+}
+
+/* font 3times and extra */
+.font-x3x {
+  font-size: 3.5rem;
+}
+
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+}
+
+ul.timeline:before {
+  content: ' ';
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 97%;
+  z-index: 400;
+}
+
+ul.timeline>li.draw {
+  margin: 30px 0;
+  padding-left: 40px;
+}
+
+ul.timeline>li.draw:before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #00B900;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
 }
