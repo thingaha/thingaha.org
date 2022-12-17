@@ -16,7 +16,7 @@
  */
 :root {
   --bs-blue: #D6B10B;
-  --bs-indigo: #53ACF8;
+  --bs-indigo: #00018A;
   --bs-purple: #ad71ff;
   --bs-pink: #ff71c3;
   --bs-red: #ff717c;
@@ -56,11 +56,11 @@
 
 body {
   margin: 0;
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #778295;
+  color: #574804;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -95,7 +95,7 @@ h6,
   font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 500;
   line-height: 1.2;
-  color: #091E40;
+  color: #583f3f;
 }
 
 h1,
@@ -250,7 +250,7 @@ a {
 }
 
 a:hover {
-  color: #5a63cc;
+  color: #00018A;
   text-decoration: underline;
 }
 
@@ -7474,7 +7474,7 @@ fieldset:disabled .btn {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
   font-size: 1rem;
-  color: #091E40;
+  color: #574804;
   background-color: #f0f0f0;
   border-bottom: 1px solid #d8d8d8;
   border-top-left-radius: calc(1.25rem - 1px);
@@ -8517,7 +8517,7 @@ fieldset:disabled .btn {
 }
 
 .border-1200 {
-  border-color: #091E40 !important;
+  border-color: #574804 !important;
 }
 
 .border-white {
@@ -10336,7 +10336,7 @@ fieldset:disabled .btn {
 }
 
 .bg-1200 {
-  background-color: #091E40 !important;
+  background-color: #574804 !important;
 }
 
 .bg-white {
@@ -10609,7 +10609,7 @@ fieldset:disabled .btn {
 }
 
 .text-1200 {
-  color: #091E40 !important;
+  color: #574804 !important;
 }
 
 .text-white {
@@ -12527,7 +12527,7 @@ fieldset:disabled .btn {
   }
 
   .text-sm-1200 {
-    color: #091E40 !important;
+    color: #574804 !important;
   }
 
   .text-sm-white {
@@ -14414,7 +14414,7 @@ fieldset:disabled .btn {
   }
 
   .text-md-1200 {
-    color: #091E40 !important;
+    color: #574804 !important;
   }
 
   .text-md-white {
@@ -16301,7 +16301,7 @@ fieldset:disabled .btn {
   }
 
   .text-lg-1200 {
-    color: #091E40 !important;
+    color: #574804 !important;
   }
 
   .text-lg-white {
@@ -18188,7 +18188,7 @@ fieldset:disabled .btn {
   }
 
   .text-xl-1200 {
-    color: #091E40 !important;
+    color: #574804 !important;
   }
 
   .text-xl-white {
@@ -20075,7 +20075,7 @@ fieldset:disabled .btn {
   }
 
   .text-xxl-1200 {
-    color: #091E40 !important;
+    color: #574804 !important;
   }
 
   .text-xxl-white {
@@ -20625,7 +20625,7 @@ ul {
 }
 
 .link-1200 {
-  color: #091E40 !important;
+  color: #574804 !important;
 }
 
 .link-1200:hover,
@@ -20927,7 +20927,7 @@ ul {
   transform: translateY(-0.125rem) translateZ(0);
   -webkit-box-shadow: 0.5rem 0.5rem 1.5rem rgba(22, 28, 45, 0.1) !important;
   box-shadow: 0.5rem 0.5rem 1.5rem rgba(22, 28, 45, 0.1) !important;
-  background-color: #53ACF8;
+  background-color: #00018A;
   color: #fff;
 }
 
