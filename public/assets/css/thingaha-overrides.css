@@ -18,8 +18,22 @@
   border-radius: 50%;
 }
 
+.thingaha-period-subtitle {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.thingaha-period-text {
+  font-size: 1rem;
+}
+
 .thingaha-member-detail-card {
   height: 400px;
+}
+
+.green-num {
+  color: #00B900;
+  font-size: 1.3em;
 }
 
 .sub-heading-color {
