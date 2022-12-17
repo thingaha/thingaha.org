@@ -31,13 +31,68 @@
   height: 400px;
 }
 
+/* text overrides */
+.text-primary {
+  color: #D6B10B !important;
+}
+
+.text-secondary {
+  color: #00018A !important;
+}
+
+.text-success {
+  color: #5fa500 !important;
+}
+
+.text-info {
+  color: #3EB8F4 !important;
+}
+
+.text-warning {
+  color: #ffee25 !important;
+}
+
+.text-danger {
+  color: #ff717c !important;
+}
+
+.text-light {
+  color: #F9FAFD !important;
+}
+
+.text-dark {
+  color: #574804 !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #D6B10B;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #00018A;
+}
+
+a.text-primary:hover,
+a.text-primary:focus {
+  color: #00018A !important;
+}
+
+
+.thingaha-sector-list {
+  text-align: left !important;
+}
 .green-num {
-  color: #00B900;
+  color: #D6B10B;
   font-size: 1.3em;
 }
 
 .sub-heading-color {
-  color: #11c50e;
+  color: #D6B10B;
 }
 
 #scroll-top-button {
@@ -107,7 +162,7 @@ ul.timeline>li.draw:before {
   display: inline-block;
   position: absolute;
   border-radius: 50%;
-  border: 3px solid #00B900;
+  border: 3px solid #D6B10B;
   left: 20px;
   width: 20px;
   height: 20px;

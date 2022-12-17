@@ -16,7 +16,7 @@
  */
 :root {
   --bs-blue: #717CFF;
-  --bs-indigo: #53ACF8;
+  --bs-indigo: #00018A;
   --bs-purple: #ad71ff;
   --bs-pink: #ff71c3;
   --bs-red: #ff717c;
@@ -18030,7 +18030,7 @@ ul {
   transform: translateY(-0.125rem) translateZ(0);
   -webkit-box-shadow: -0.5rem 0.5rem 1.5rem rgba(22, 28, 45, 0.1) !important;
   box-shadow: -0.5rem 0.5rem 1.5rem rgba(22, 28, 45, 0.1) !important;
-  background-color: #53ACF8;
+  background-color: #00018A;
   color: #fff;
 }
 
