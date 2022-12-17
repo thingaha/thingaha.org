@@ -32,12 +32,12 @@
 }
 
 .green-num {
-  color: #00B900;
+  color: #D6B10B;
   font-size: 1.3em;
 }
 
 .sub-heading-color {
-  color: #11c50e;
+  color: #D6B10B;
 }
 
 #scroll-top-button {
@@ -107,7 +107,7 @@ ul.timeline>li.draw:before {
   display: inline-block;
   position: absolute;
   border-radius: 50%;
-  border: 3px solid #00B900;
+  border: 3px solid #D6B10B;
   left: 20px;
   width: 20px;
   height: 20px;
