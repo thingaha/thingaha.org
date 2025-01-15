@@ -168,3 +168,32 @@ ul.timeline>li.draw:before {
   height: 20px;
   z-index: 400;
 }
+
+.floating-nav {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.floating-nav ul {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.floating-nav ul li {
+  margin: 5px 0;
+}
+
+.floating-nav ul li a {
+  text-decoration: none;
+  color: #D6B10B;
+}
+
+.floating-nav ul li a:hover {
+  text-decoration: underline;
+}

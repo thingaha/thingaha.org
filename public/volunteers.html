@@ -87,7 +87,39 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="bg-100">
+      <section id="contributers-title" class="bg-100">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 mx-auto text-center my-5">
+              <h6 class="fw-light fs-3 fs-lg-5 lh-sm mb-4">
+                Contributors
+              </h6>
+              <p class="mb-3">
+                Our Contributors list, Donators, Mentors, Volunteers
+              </p>
+            </div>
+          </div>
+          <div class="row flex-center h-100">
+            <div class="col-xl-9">
+              <div id="contributors-list" class="row justify-content-center">
+
+                <!--Contributors list area -->
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- end of .container-->
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+      
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section id="volunteer-title" class="">
         <div class="container">
           <div class="row">
             <div class="col-lg-7 mx-auto text-center my-5">
@@ -117,7 +149,7 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-0 bg-primary">
+      <section id="volunteer-body" class="py-0 bg-primary">
         <div class="container">
           <div class="row justify-content-between pb-2 pt-4">
             <div class="col-12 col-lg-auto mb-5 mb-lg-0">
@@ -168,7 +200,7 @@
     <script src="vendors/@popperjs/popper.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.min.js"></script>
     <script src="vendors/is/is.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="assets/js/thingaha-customs.js"></script>
@@ -279,17 +311,17 @@
       ]
 
       let content = '';
-      items.forEach(contributor => {
+      items.forEach(volunteer => {
         content += `
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4 p-2">
               <div class="card h-100 shadow card-span p-1">
                 <div class="card-body p-2">
-                  <div class="d-flex align-items-center"><img class="img-fluid thingaha-volunteer-img" src="assets/img/gallery/volunteers/${contributor.filename}" alt="testimonials" />
+                  <div class="d-flex align-items-center"><img class="img-fluid thingaha-volunteer-img" src="assets/img/gallery/volunteers/${volunteer.filename}" alt="testimonials" />
                     <div class="flex-1 ms-4 ms-md-2">
                       <p class="card-text text-black fs--1 m-0">
-                        <a href=${contributor.githubUrl}>${contributor.name}</a>
+                        <a href=${volunteer.githubUrl}>${volunteer.name}</a>
                       </p>
-                      <p class="card-text fs--1 m-0">${contributor.country}</p>
+                      <p class="card-text fs--1 m-0">${volunteer.country}</p>
                     </div>
                   </div>
                 </div>
@@ -298,6 +330,62 @@
         `
       });
       document.querySelector("#volunteers-list").innerHTML = content;
+    </script>
+
+    <script>
+      var items = [
+        {
+          name: 'Khine Zar Thwe',
+          roles: 'Mentor',
+          filename: 'icons/handshake.png'
+        },
+        {
+          name: 'Chan Myae San Hlaing',
+          roles: 'Donator, Mentor',
+          filename: 'icons/handshake.png'
+        },
+        {
+          name: 'Ye Khaung',
+          roles: 'Volunteer',
+          filename: 'icons/handshake.png'
+        },
+        {
+          name: 'Khine Zar Thwe',
+          roles: 'Mentor',
+          filename: 'icons/handshake.png'
+        },
+        {
+          name: 'Chan Myae San Hlaing',
+          roles: 'Donator, Mentor',
+          filename: 'icons/handshake.png'
+        },
+        {
+          name: 'Ye Khaung',
+          roles: 'Volunteer',
+          filename: 'icons/handshake.png'
+        }
+      ]
+
+      let contribute_content = '';
+      items.forEach(contributor => {
+        contribute_content += `
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 p-2">
+              <div class="card h-100 shadow card-span p-1">
+                <div class="card-body p-2">
+                  <div class="d-flex align-items-center"><img class="img-fluid thingaha-volunteer-img" src="assets/img/${contributor.filename}" alt="testimonials" />
+                    <div class="flex-1 ms-4 ms-md-2">
+                      <p class="card-text text-black fs--1 m-0">
+                        ${contributor.name}
+                      </p>
+                      <p class="card-text fs--1 m-0">${contributor.roles}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        `
+      });
+      document.querySelector("#contributors-list").innerHTML = contribute_content;
     </script>
 
     <link
