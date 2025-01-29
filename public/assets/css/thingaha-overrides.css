@@ -18,6 +18,19 @@
   border-radius: 50%;
 }
 
+.thingaha-flower-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10%;
+}
+
+.year-pill {
+  font-size: 0.6rem;
+  padding: 0.1rem 0.3rem;
+  margin: 0.15rem;
+  font-weight: normal;
+}
+
 .thingaha-period-subtitle {
   font-weight: bold;
   font-size: 1.2rem;

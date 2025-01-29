@@ -8,7 +8,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>volunteers</title>
+    <title>Students</title>
 
     <!-- ===============================================-->
     <!--    Favicons-->
@@ -77,6 +77,12 @@
           <div class="justify-content-end" id="navbarSupportedContent">
             <a
               class="btn btn-outline-primary order-0"
+              href="students.html"
+              type="submit"
+              >Before 2021</a
+            >
+            <a
+              class="btn btn-outline-primary order-0"
               href="index.html#missions"
               type="submit"
               >Back</a
@@ -87,69 +93,79 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section id="contributers-title" class="bg-100">
+      <section class="bg-100">
         <div class="container">
           <div class="row">
             <div class="col-lg-7 mx-auto text-center my-5">
               <h6 class="fw-light fs-3 fs-lg-5 lh-sm mb-4">
-                Contributors
+                Our students list [2021 - Now]
               </h6>
               <p class="mb-3">
-                Our Contributors list, Donators, Mentors, Volunteers
+                2023 volunteer mentor program bar nyar bar nyar.  <br>
+                2024 GED program bar nyar bar nyar.  <br>
+                2025 bar nyar bar nyar.  <br>
               </p>
             </div>
           </div>
-          <div class="row flex-center h-100">
-            <div class="col-xl-12">
-              <div id="contributors-list" class="row justify-content-center">
+          
+          <!-- <div class="row flex-center h-100">
+            <div class="col-xl-9">
+              <div class="row justify-content-center">
 
-                <!--Contributors list area -->
-
+                <div class="col-sm-12">
+                  <canvas id="students-list-year" ></canvas>
+                </div>
               </div>
             </div>
-
-          </div>
+          </div> -->
         </div>
         <!-- end of .container-->
       </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
 
-      
-
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section id="volunteer-title" class="">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-7 mx-auto text-center my-5">
-              <h6 class="fw-light fs-3 fs-lg-5 lh-sm mb-4">
-                Volunteers
-              </h6>
-              <p class="mb-3">
-                Volunteers from Japan, Myanmar and Singapore contributed to our Thingaha website and application development.
-              </p>
+        <section>
+          <div class="container">
+            <div class="row flex-center h-100">
+              <div class="col-xl-6">
+                <canvas id="students-list-grade" height="250"></canvas>
+              </div>
             </div>
           </div>
+          <!-- end of .container-->
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+    
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="bg-100">
+        <div class="container">
           <div class="row flex-center h-100">
             <div class="col-xl-9">
-              <div id="volunteers-list" class="row justify-content-center">
+              <div class="row justify-content-center">
 
-                <!--volunteers list area -->
+                <div class="col-6">
+                  <canvas id="students-chart-current" width="400" height="300"></canvas>
+                </div>
+                <div class="col-6">
+                  <canvas id="students-chart-alltime" width="400" height="300"></canvas>
+                </div>
 
               </div>
             </div>
-
           </div>
         </div>
         <!-- end of .container-->
       </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
-
+  
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section id="volunteer-body" class="py-0 bg-primary">
+      <section class="py-0 bg-primary">
         <div class="container">
           <div class="row justify-content-between pb-2 pt-4">
             <div class="col-12 col-lg-auto mb-5 mb-lg-0">
@@ -200,217 +216,182 @@
     <script src="vendors/@popperjs/popper.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.min.js"></script>
     <script src="vendors/is/is.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=smoothscroll"></script>
     <script src="assets/js/theme.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="assets/js/thingaha-customs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js" integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-      var items = [
-        {
-          name: 'Khine Zar Thwe',
-          country: 'Japan',
-          filename: 'khine_zar_thwe.jpg',
-          githubUrl: 'https://github.com/khinezarthwe'
-        },
-        {
-          name: 'Chan Myae San Hlaing',
-          country: 'Japan',
-          filename: 'chan_myae_san_hlaing.jpg',
-          githubUrl: 'https://github.com/dreamingblackcat'
-        },
-        {
-          name: 'Ye Khaung',
-          country: 'Myanmar',
-          filename: 'ye_khaung.jpg',
-          githubUrl: 'https://github.com/yekhaung'
-        },
-        {
-          name: 'Sis Minn Maw',
-          country: 'Japan',
-          filename: 'sis_minn_maw.jpg',
-          githubUrl: 'https://github.com/sisminnmaw'
-        },
-        {
-          name: 'Naing Aung Phyo',
-          country: 'Japan',
-          filename: 'naing_aung_phyo.jpg',
-          githubUrl: 'https://github.com/naingaungphyo'
-        },
-        {
-          name: 'Yee Mon Aung',
-          country: 'Japan',
-          filename: 'yee_mon_aung.jpg',
-          githubUrl: 'https://github.com/yeemon04'
-        },
-        {
-          name: 'Ei Thingyan Moe',
-          country: 'Japan',
-          filename: 'ei_thingyan_moe.jpg',
-          githubUrl: 'https://github.com/EiThingyanMoe'
-        },
-        {
-          name: 'Min Thiri',
-          country: 'Japan',
-          filename: 'minn_thiri.png',
-          githubUrl: "https://github.com/MinnThiri"
-        },
-        {
-          name: 'Khine Wai Oo',
-          country: 'Japan',
-          filename: 'khine_wai_oo.jpg',
-          githubUrl: 'https://github.com/KhineWai710'
-        },
-        {
-          name: 'Pin Maing Soe',
-          country: 'Japan',
-          filename: 'pin_maing_soe.jpg',
-          githubUrl: 'https://github.com/pinmaing'
-        },
-        {
-          name: 'Thandar Khine Aye',
-          country: 'Japan',
-          filename: 'thandar_khine_aye.jpg',
-          githubUrl: 'https://github.com/thandarkhineaye'
-        },
-        {
-          name: 'Inzali Naing',
-          country: 'Japan',
-          filename: 'inzali_naing.png',
-          githubUrl: 'https://github.com/InzaliNaing'
-        },
-        {
-          name: 'Khine Khine Kyaw',
-          country: 'Japan',
-          filename: 'khine_khine_kyaw.jpg',
-          githubUrl: 'https://github.com/KhineKhineKyaw'
-        },
-        {
-          name: 'Mya Maw Swe',
-          country: 'Japan',
-          filename: 'mya_maw_swe.jpg',
-          githubUrl: 'https://github.com/myamaw'
-        },
-        {
-          name: 'Su Thwe Thwe Tun',
-          country: 'Singapore',
-          filename: 'su_thwe_thwe_tun.jpg',
-          githubUrl: 'https://github.com/SuThwe'
-        },
-        {
-          name: 'Thiha Aye Kyaw',
-          country: 'Myanmar',
-          filename: 'thiha_aye_kyaw.jpg',
-          githubUrl: 'https://github.com/frozencity'
-        },
-        {
-          name: 'Hnin Oo Wai Hlaing',
-          country: 'Myanmar',
-          filename: 'hnin_oo_wai_hlaing.jpg',
-          githubUrl: 'https://www.facebook.com/moe.thae.393'
-        }
-      ]
+      const CHART_COLORS = {
+        red: 'rgb(255, 99, 132)',
+        orange: 'rgb(255, 159, 64)',
+        yellow: 'rgb(255, 205, 86)',
+        green: 'rgb(75, 192, 192)',
+        blue: 'rgb(54, 162, 235)',
+        purple: 'rgb(153, 102, 255)',
+        grey: 'rgb(201, 203, 207)',
+        pink: 'rgb(255, 182, 193)', // Added pink
+        cyan: 'rgb(0, 255, 255)'    // Added cyan
+      };
 
-      let content = '';
-      items.forEach(volunteer => {
-        content += `
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 p-2">
-              <div class="card h-100 shadow card-span p-1">
-                <div class="card-body p-2">
-                  <div class="d-flex align-items-center"><img class="img-fluid thingaha-volunteer-img" src="assets/img/gallery/volunteers/${volunteer.filename}" alt="testimonials" />
-                    <div class="flex-1 ms-4 ms-md-2">
-                      <p class="card-text text-black fs--1 m-0">
-                        <a href=${volunteer.githubUrl}>${volunteer.name}</a>
-                      </p>
-                      <p class="card-text fs--1 m-0">${volunteer.country}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-        `
+      const yearLabels = ['2023', '2024', '2025'];
+
+      //Student list year
+      // var ctx_list_year = document.getElementById('students-list-year');
+      // var chart_list_year = new Chart(ctx_list_year, {
+      //   type: 'line',
+      //   data: {
+      //     labels: yearLabels,
+      //     datasets: [
+      //       {
+      //         label: 'Total Students',
+      //         data: [13, 54, 38],
+      //         backgroundColor: 'rgba(75, 192, 192, 0.5)',
+      //         borderColor: CHART_COLORS.green,
+      //         fill: true
+      //       }
+      //     ]
+      //   },
+      //   options: {
+      //     responsive: true,
+      //     plugins: {
+      //       legend: {
+      //         position: 'top',
+      //       },
+      //       title: {
+      //         display: true,
+      //         text: 'Yearly supported students'
+      //       },
+      //       filler: {
+      //         propagate: false,
+      //       }
+      //     },
+      //     interaction: {
+      //       intersect: false,
+      //     }
+      //   },
+      // });
+
+
+      //Student list grade
+      var ctx_list_grade = document.getElementById('students-list-grade');
+      var chart_list_grade = new Chart(ctx_list_grade, {
+        type: 'bar',
+        data: {
+          labels: yearLabels,
+          datasets: [
+            {
+              label: 'Attendees',
+              data: [13, 54, 38],
+              backgroundColor: CHART_COLORS.green,
+              innerWidth: 10
+            }
+          ]
+        },
+        options: {
+          indexAxis: 'x',
+          responsive: true,
+          elements: {
+            bar: {
+              borderWidth: 2,
+              maxBarThickness: 0.5,
+            }
+          },
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: 'Students list by grade'
+            }
+          },
+        },
       });
-      document.querySelector("#volunteers-list").innerHTML = content;
-    </script>
+ 
+      
+      //Current Student list - Start
+      //data setting
+      var current_gender =
+        {
+          title: 'Current Students list 2025',
+          labels: ['girls', 'boys'],
+          data: [30, 8]
+        };
 
-    <script>
-      function setRandomImage() {
-          // Generate a random number between 1 and 20
-          let randomNumber = Math.floor(Math.random() * 20) + 1;
-          
-          // Return the image tag as a string with class and src attributes
-          return `<img class="img-fluid thingaha-flower-img" src="assets/img/flowerpack/${randomNumber}.PNG">`;
-      }
-
-      function generateYears(array) {
-          // Map the array to div elements and join them into a single string
-          return array.map(year => `<span class="badge bg-secondary year-pill">${year}</span>`).join('');
-      }
-
-      var items = [
-        {
-          name: 'Khine Zar Thwe',
-          roles: 'Mentor',
-          filename: 'icons/handshake.png',
-          years: [2021, 2022]
+      var ctx_current = document.getElementById('students-chart-current');
+      var chart_current = new Chart(ctx_current, {
+        type: 'doughnut',
+        data: {
+          labels: current_gender.labels,
+          datasets: [
+            {
+              label: current_gender.title,
+              data: current_gender.data,
+              backgroundColor: [
+                CHART_COLORS.pink,
+                CHART_COLORS.cyan
+              ],
+              // borderColor: [
+              //   'rgba(0, 185, 0, 1)',
+              //   'rgba(0, 185, 0, 1)'
+              // ]
+            }
+          ]
         },
-        {
-          name: 'Chan Myae San Hlaing',
-          roles: 'Donator, Mentor',
-          filename: 'icons/handshake.png',
-          years: [2021]
-        },
-        {
-          name: 'Ye Khaung',
-          roles: 'Volunteer',
-          filename: 'icons/handshake.png',
-          years: [2021, 2022]
-        },
-        {
-          name: 'Khine Zar Thwe',
-          roles: 'Mentor',
-          filename: 'icons/handshake.png',
-          years: [2021, 2022, 2023]
-        },
-        {
-          name: 'Chan Myae San Hlaing',
-          roles: 'Donator, Mentor',
-          filename: 'icons/handshake.png',
-          years: [2021, 2022]
-        },
-        {
-          name: 'Ye Khaung',
-          roles: 'Volunteer',
-          filename: 'icons/handshake.png',
-          years: [2021, 2022]
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: current_gender.title,
+            }
+          }
         }
-      ]
-
-      let contribute_content = '';
-      items.forEach(contributor => {
-        contribute_content += `
-            <div class="col-lg-2 col-md-3 col-sm-4 mb-4 p-1">
-              <div class="card h-100 shadow card-span p-1">
-                <div class="card-body p-1">
-                  <div class="d-flex align-items-center">
-                    ${setRandomImage()}
-                    <div class="flex-1 ms-4 ms-md-2">
-                      <p class="card-text text-black fs--1 m-0">
-                        ${contributor.name}
-                      </p>
-                      
-                    </div>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <div>
-                      ${generateYears(contributor.years)}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-        `
       });
-      document.querySelector("#contributors-list").innerHTML = contribute_content;
+      //Current Student list - End
+
+      //All-time Student list - Start
+      //data setting
+      var alltime_gender =
+        {
+          title: 'Students list 2023-2025',
+          labels: ['girls', 'boys'],
+          data: [57, 22]
+        };
+      var ctx_alltime = document.getElementById('students-chart-alltime');
+      var chart_alltime = new Chart(ctx_alltime, {
+        type: 'pie',
+        data: {
+          labels: alltime_gender.labels,
+          datasets: [
+            {
+              label: alltime_gender.title,
+              data: alltime_gender.data,
+              backgroundColor: [
+                CHART_COLORS.red,
+                CHART_COLORS.green
+              ],
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: alltime_gender.title
+            }
+          }
+        }
+      });
+      //All-time Student list - End
     </script>
 
     <link
