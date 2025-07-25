@@ -92,11 +92,10 @@
           <div class="row">
             <div class="col-lg-7 mx-auto text-center my-5">
               <h6 class="fw-light fs-3 fs-lg-5 lh-sm mb-4">
-                Contributors
+                Our Community of Support
               </h6>
               <p class="mb-3">
-                Our Contributors list, Donators, Mentors, Volunteers
-              </p>
+                Our heartfelt gratitude to the generous donors and dedicated volunteers who have supported Thingaha over the past years.              </p>
             </div>
           </div>
           <div class="row flex-center h-100">
@@ -127,7 +126,7 @@
                 Volunteers
               </h6>
               <p class="mb-3">
-                Volunteers from Japan, Myanmar and Singapore contributed to our Thingaha website and application development.
+                Volunteers from Japan, Myanmar and Singapore contributed to our Thingaha website.
               </p>
             </div>
           </div>
@@ -346,45 +345,316 @@
           return array.map(year => `<span class="badge bg-secondary year-pill">${year}</span>`).join('');
       }
 
-      var items = [
-        {
-          name: 'Khine Zar Thwe',
-          roles: 'Mentor',
-          filename: 'icons/handshake.png',
-          years: [2021, 2022]
-        },
-        {
-          name: 'Chan Myae San Hlaing',
-          roles: 'Donator, Mentor',
-          filename: 'icons/handshake.png',
-          years: [2021]
-        },
-        {
-          name: 'Ye Khaung',
-          roles: 'Volunteer',
-          filename: 'icons/handshake.png',
-          years: [2021, 2022]
-        },
-        {
-          name: 'Khine Zar Thwe',
-          roles: 'Mentor',
-          filename: 'icons/handshake.png',
-          years: [2021, 2022, 2023]
-        },
-        {
-          name: 'Chan Myae San Hlaing',
-          roles: 'Donator, Mentor',
-          filename: 'icons/handshake.png',
-          years: [2021, 2022]
-        },
-        {
-          name: 'Ye Khaung',
-          roles: 'Volunteer',
-          filename: 'icons/handshake.png',
-          years: [2021, 2022]
-        }
-      ]
+      // Volunteer data embedded directly in the HTML
+      const volunteerData = {
+        "2016": [
+          "Thandar Khine Aye",
+          "Win Lae Aye",
+          "Yee Mon Aung",
+          "Khin Sabae Han",
+          "NoeNo Saw Lwin",
+          "Nor Theigi Aung",
+          "Thet Zin Zin",
+          "Thinzar Lynn",
+          "Khine Su Thein",
+          "Aye Thant Htoo",
+          "Tin Moe Aye",
+          "Khine Shwe Wah",
+          "Thazin Oo",
+          "Su Pan Sin",
+          "Thet Hlaing",
+          "Chan Myae San Hlaing",
+          "Khin Htay Kyi",
+          "Yawai Tint",
+          "Aung Paing",
+          "Hsu Hnin Wai",
+          "May Thu Lwin"
+        ],
+        "2017": [
+          "Thet Zin Zin",
+          "Than Htay Aung",
+          "Khine Shwe Wah",
+          "Khin Sabae Han",
+          "Nor Theigi Aung",
+          "Yee Mon Aung",
+          "Thandar Khine Aye",
+          "Nilar Zaw Min",
+          "Thinzar Lynn",
+          "Ye Htun Oo",
+          "Dr Wai Yan Paing",
+          "Htwe Ei Theint",
+          "Hsu Hnin Wai",
+          "Phyo Thiri Aung",
+          "Nan Pyae Nyein Thar",
+          "Thet Hlaing",
+          "Kyaw Ye Lynn",
+          "Chan Myae San Hlaing",
+          "Win Zaw Htet",
+          "Tin Moe Aye",
+          "Wint Yee Lwin",
+          "NoeNo Saw Lwin",
+          "May Thin Hay Mar",
+          "Hnin Yee Maung Maung",
+          "Yu Myat Aye",
+          "Khine Su Thein",
+          "May Thu Lwin",
+          "Mya Thone Khin",
+          "Thu Thu Hlaing",
+          "Aye Thant Htoo"
+        ],
+        "2018": [
+          "Thet Zin Zin",
+          "Than Htay Aung",
+          "Khine Shwe Wah",
+          "Khin Sabae Han",
+          "Nor Theigi Aung",
+          "Yee Mon Aung",
+          "Thandar Khine Aye",
+          "Nilar Zaw Min",
+          "Thinzar Lynn",
+          "Ye Htun Oo",
+          "Dr Wai Yan Paing",
+          "Htwe Ei Theint",
+          "Hsu Hnin Wai",
+          "Khine Su Thein",
+          "Phyo Thiri Aung",
+          "Nan Pyae Nyein Thar",
+          "Thet Hlaing",
+          "May Thu Lwin",
+          "Kyaw Ye Lynn",
+          "Aye Thant Htoo",
+          "Chan Myae San Hlaing",
+          "Win Zaw Htet",
+          "Thu Thu Hlaing",
+          "Tin Moe Aye",
+          "Wint Yee Lwin",
+          "Mya Thone Khin",
+          "NoeNo Saw Lwin",
+          "May Thin Hay Mar",
+          "Hnin Yee Maung Maung",
+          "Yu Myat Aye"
+        ],
+        "2019": [
+          "Thet Zin Zin",
+          "Than Htay Aung",
+          "Khine Shwe Wah",
+          "Khin Sabae Han",
+          "Nor Theigi Aung",
+          "Yee Mon Aung",
+          "Thandar Khine Aye",
+          "Nilar Zaw Min",
+          "Thinzar Lynn",
+          "Dr Wai Yan Paing",
+          "Htwe Ei Theint",
+          "Phyo Thiri Aung",
+          "Nan Pyae Nyein Thar",
+          "Thet Hlaing",
+          "May Thu Lwin",
+          "Thuta Shin Thant",
+          "Kyaw Ye Lynn",
+          "Aye Thant Htoo",
+          "Theo Lynn",
+          "Chan Myae San Hlaing",
+          "Wint Yee Lwin",
+          "NoeNo Saw Lwin",
+          "Hnin Yee Maung Maung",
+          "Yu Myat Aye",
+          "Min Thiri",
+          "Aye Aye Phyu Kyaw",
+          "Su Su Latt",
+          "Pin Maing Soe",
+          "Khine Wai Oo",
+          "Kaung Hset Lwin",
+          "Yan Aung Paing",
+          "Su Htike Ko",
+          "Than Zin Myat Noe",
+          "Aung Moe Hlaing",
+          "Ei Thingyan Moe",
+          "Htet Wai Aung",
+          "Zin Win Myat",
+          "Yoon Linka Htet",
+          "Sai San Lyan",
+          "Lae Yamin Soe",
+          "Thandar Aung",
+          "Zin Thandar Tun"
+        ],
+        "2020": [
+          "Hsu Hsu Thet Zaw",
+          "Hsu Myat Thida",
+          "Yu Myat Aye",
+          "Khine Wai Zin",
+          "Htet Ko Ko",
+          "Ei Mon Lwin",
+          "NoeNo Saw Lwin",
+          "Nilar Zaw Min",
+          "Phyo Ei Ei San",
+          "Chan Myae San Hlaing",
+          "Wint Yee Lwin",
+          "Thet Zin Zin",
+          "Nor Theigi Aung",
+          "Aye Aye Myint",
+          "Thandar Khine Aye",
+          "Nan Pyae Nyein Thar",
+          "Yee Mon Aung",
+          "Su Su Latt",
+          "Pin Maing Soe",
+          "Khine Wai Oo",
+          "Su Htike Ko",
+          "Thinzar Lynn",
+          "Hnin Yee Maung Maung",
+          "Zin Thandar Tun",
+          "Khin Sabae Han",
+          "Phyo Thiri Aung",
+          "Shar Thwin Ooo",
+          "Lae Yamin Soe",
+          "Aung Moe Hlaing",
+          "Ei Thingyan Moe",
+          "Min Thiri",
+          "Aye Aye Phyu Kyaw",
+          "Htet Wai Aung",
+          "Zin Win Myat",
+          "Yoon Linka Htet",
+          "ThanSin Myat Noe",
+          "Thet Hlaing",
+          "May Thu Lwin",
+          "Thuta Shin Thant",
+          "Kyaw Ye Lynn",
+          "Aye Thant Htoo",
+          "Theo Lynn",
+          "Htoo Htoo Aung",
+          "Waing Sanny",
+          "ThoHi",
+          "Yu Thandar Tun",
+          "Khin Sandar Win",
+          "Myat Moe Thwe",
+          "Dr. Kham Tip Dar",
+          "Su Thwe Thwe Tun",
+          "Mg Paing Htoo",
+          "Dr Yee Mon Thant",
+          "Moh Moh Aung",
+          "Su Sandi",
+          "Eaint Cho Tun",
+          "Than Htay Aung",
+          "Khine Shwe Wah Win",
+          "Yeh Mon Khaing",
+          "Sis Hmue Maw",
+          "Mya Maw Swe",
+          "Thaw Zin Tun"
+        ],
+        "2023": [
+          "Chan Myae San Hlaing",
+          "Hsu Hnin Wai",
+          "Su Myat Noe",
+          "Thandar Khine Aye",
+          "Thireindar Min",
+          "Yee Mon Aung",
+          "Khine Wai Oo",
+          "Pin Maing Soe",
+          "Ei Thingyan Moe",
+          "Nor Theigi Aung",
+          "Khaing Wutyi Hnin",
+          "Nyan Lin Aung",
+          "Ma Yee Mon Aung",
+          "Ko Thet Hlaing",
+          "May Thu Lwin",
+          "Thuta Shin Thant",
+          "Phyo Phyo San",
+          "Su Thwe Thwe Tun",
+          "Win Lei Thwe",
+          "Su Myat Noe",
+          "Khaing Wutyi Hnin",
+          "Thireindar Min",
+          "Aye Thant Htoo",
+          "May Thu Lwin",
+          "Phyoe Wai Yan Oo",
+          "Thinzar Lynn",
+          "Khaing Wutyi Hnin",
+          "Phyo Ei San",
+          "Thet Hlaing",
+          "Phyo Phyo San"
+        ],
+        "2024": [
+          "Wint Yee Lwin",
+          "Hsu Hnin Wai",
+          "Thandar Khine Aye",
+          "Chan Myae San Hlaing",
+          "Ei Thingyan Moe",
+          "Su Myat Noe",
+          "Pin Maing Soe",
+          "Khine Wai Oo",
+          "Nor Theingi Aung",
+          "Nyan Lin Aung",
+          "Yee Mon Aung",
+          "Khaing Wutyi Hnin",
+          "Thireindar Min",
+          "Nway Nway Ei",
+          "Yee Mon Aung",
+          "Nang Ohnmar Thein",
+          "Mya Maw Swe",
+          "Khaing Hsu Wai",
+          "Dr Myo Thida",
+          "Thinzar Lynn",
+          "Htet Thinzar Naing"
+        ],
+        "2025": [
+          "Tara Chan Myae",
+          "Thandar Khine Aye",
+          "Nang Ohnmar Thein",
+          "Su Myat Noe",
+          "Khaing Hsu Wai",
+          "Nyan Lin Aung",
+          "Ma Yee Mon Aung",
+          "Yee Mon Aung",
+          "May Khine Nyein",
+          "Nor Theingi Aung",
+          "Thinzar Lynn",
+          "Hsu Hnin Wai",
+          "Nilar Zaw Min",
+          "Ei Thingyan Moe",
+          "Khaing Wutyi Hnin",
+          "Nway Nway Ei",
+          "Pin Maing Soe",
+          "Khine Wai Oo",
+          "Set Kyar Wa Lar",
+          "Aye Mon Yadanar Aung",
+          "Hnin Shwe Zin Hlaing",
+          "Mya Maw Swe",
+          "Nilar Hlaing",
+          "Phyo Phyo San",
+          "Eaint Cho Tun",
+          "Mya Thuzar Lwyn",
+          "Ei Nay Chi Khaing",
+          "NoeNo Saw Lwin"
+        ]
+      };
 
+      // Create a map to store volunteer names and their years
+      const volunteerMap = new Map();
+      
+      // Process each year and add volunteers to the map
+      Object.keys(volunteerData).forEach(year => {
+        const volunteers = volunteerData[year];
+        volunteers.forEach(volunteer => {
+          if (volunteerMap.has(volunteer)) {
+            volunteerMap.get(volunteer).push(parseInt(year));
+          } else {
+            volunteerMap.set(volunteer, [parseInt(year)]);
+          }
+        });
+      });
+      
+      // Convert map to items array format
+      var items = Array.from(volunteerMap.entries()).map(([name, years]) => ({
+        name: name,
+        roles: "Donator",
+        filename: "icons/handshake.png",
+        years: years.sort((a, b) => a - b) // Sort years in ascending order
+      }));
+      
+      // Sort items by number of years (count) in descending order
+      items.sort((a, b) => b.years.length - a.years.length);
+      
+      // Generate content after items array is created
       let contribute_content = '';
       items.forEach(contributor => {
         contribute_content += `
