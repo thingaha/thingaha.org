@@ -226,7 +226,7 @@ ul.timeline>li.draw:before {
   background-color: #F9FAFD;
   border: 1px solid #d8dfec;
   border-radius: 1.25rem;
-  padding: 2.25rem;
+  padding: 2.1rem 2.25rem 1.85rem;
   box-shadow: 0 16px 36px rgba(87, 72, 4, 0.1);
 }
 
@@ -236,25 +236,13 @@ ul.timeline>li.draw:before {
   font-weight: 600;
 }
 
-.student-gallery-stat {
-  background-color: #fff;
-  border: 1px solid #d8dfec;
-  border-radius: 0.75rem;
-  padding: 0.9rem 0.8rem;
-  text-align: center;
-  height: 100%;
-}
-
-.student-gallery-stats {
-  max-width: 460px;
-  margin-left: auto;
-  margin-right: auto;
-  --bs-gutter-x: 0.9rem;
-  --bs-gutter-y: 0.9rem;
-}
-
-.student-gallery-stats > [class*="col-"] {
-  display: flex;
+.student-gallery-meta {
+  color: #5d687d;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  line-height: 1.35;
 }
 
 .mobile-year-nav {
@@ -281,13 +269,8 @@ ul.timeline>li.draw:before {
 
 .student-art-image-wrap {
   position: relative;
-}
-
-.student-art-category {
-  left: 0.75rem;
-  position: absolute;
-  top: 0.75rem;
-  z-index: 2;
+  line-height: 0;
+  background-color: #f7f9fd;
 }
 
 .student-art-expand-btn {
@@ -298,14 +281,14 @@ ul.timeline>li.draw:before {
   color: #1f2530;
   cursor: pointer;
   display: inline-flex;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  height: 2.2rem;
+  height: 2rem;
   justify-content: center;
   position: absolute;
-  right: 0.75rem;
-  top: 0.75rem;
-  width: 2.2rem;
+  right: 0.6rem;
+  top: 0.6rem;
+  width: 2rem;
   z-index: 2;
   box-shadow: 0 5px 14px rgba(31, 37, 48, 0.16);
 }
@@ -321,6 +304,7 @@ ul.timeline>li.draw:before {
 }
 
 .artwork-image {
+  display: block;
   border-radius: 0;
   width: 100%;
   height: 240px;
@@ -375,6 +359,7 @@ ul.timeline>li.draw:before {
   align-items: center;
   justify-content: center;
   display: flex;
+  padding: 0.55rem;
 }
 
 .student-art-modal-backdrop {
@@ -384,21 +369,29 @@ ul.timeline>li.draw:before {
 }
 
 .student-art-modal-content {
-  max-height: 90vh;
-  max-width: min(1000px, 92vw);
+  width: auto;
+  max-width: min(1120px, calc(100vw - 1.1rem));
+  max-height: calc(100vh - 1.1rem);
+  max-height: calc(100dvh - 1.1rem);
   position: relative;
-  width: fit-content;
   border-radius: 0.9rem;
   overflow: hidden;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
   border: 1px solid #d8dfec;
   background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.25rem 0.45rem 0.45rem;
 }
 
 .student-art-modal-content img {
   display: block;
-  max-height: 90vh;
-  max-width: 92vw;
+  width: auto;
+  height: auto;
+  max-width: min(100%, calc(100vw - 1.9rem));
+  max-height: calc(100vh - 3.1rem);
+  max-height: calc(100dvh - 3.1rem);
   object-fit: contain;
 }
 
@@ -418,6 +411,7 @@ ul.timeline>li.draw:before {
   top: 0.75rem;
   width: 2.1rem;
   box-shadow: 0 6px 16px rgba(0, 1, 138, 0.2);
+  z-index: 2;
 }
 
 @media (min-width: 768px) {
@@ -438,11 +432,7 @@ ul.timeline>li.draw:before {
   }
 
   .student-gallery-hero {
-    padding: 1.5rem;
-  }
-
-  .student-gallery-stats {
-    max-width: 420px;
+    padding: 1.35rem 1.4rem 1.25rem;
   }
 
   .floating-nav {
@@ -601,34 +591,56 @@ ul.timeline>li.draw:before {
   margin-bottom: 0.75rem;
 }
 
+.tip-payment-methods {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+
 .tip-payment-card {
   border: 1px solid #d8dfec;
   background-color: #f7f9fd;
   border-radius: 0.85rem;
-  padding: 0.9rem;
-  margin-bottom: 0.8rem;
+  padding: 0.65rem 0.7rem;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .tip-payment-header {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.65rem;
+  gap: 0.6rem;
+  margin-bottom: 0.35rem;
 }
 
-.tip-paypal-logo {
+.tip-payment-logo {
   width: 86px;
   height: 32px;
+  display: block;
+  flex: 0 0 auto;
   object-fit: contain;
+  object-position: center;
   background-color: #fff;
   border: 1px solid #dce3f0;
   border-radius: 0.5rem;
   padding: 0.2rem 0.35rem;
 }
 
+.tip-wise-logo {
+  padding: 0.15rem 0.3rem;
+}
+
 .tip-payment-details {
-  padding-top: 0.4rem;
+  padding-top: 0.25rem;
   border-top: 1px solid #e3e8f2;
+  margin-top: auto;
+}
+
+.tip-payment-card-wise {
+  background-color: #fafdff;
 }
 
 .tip-email-card {
@@ -682,7 +694,36 @@ ul.timeline>li.draw:before {
   }
 }
 
+@media (max-width: 767.98px) {
+  .tip-payment-methods {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+}
+
 @media (max-width: 575.98px) {
+  .student-art-modal {
+    padding: 0.3rem;
+  }
+
+  .student-art-modal-content {
+    max-width: calc(100vw - 0.6rem);
+    max-height: calc(100vh - 0.6rem);
+    max-height: calc(100dvh - 0.6rem);
+    padding: 2rem 0.35rem 0.35rem;
+  }
+
+  .student-art-modal-content img {
+    max-width: calc(100vw - 1rem);
+    max-height: calc(100vh - 2.35rem);
+    max-height: calc(100dvh - 2.35rem);
+  }
+
+  .student-art-modal-close {
+    right: 0.35rem;
+    top: 0.35rem;
+  }
+
   .tip-modal {
     padding: 0.75rem;
   }

@@ -67,21 +67,8 @@
                 <p class="student-gallery-breadcrumb mb-2">Activities / Student Art &amp; Painting Gallery</p>
                 <span class="badge rounded-pill bg-primary mb-3">NEW ACTIVITY</span>
                 <h1 class="fs-3 fs-lg-5 mb-3">Student Art &amp; Painting Gallery</h1>
-                <p class="mb-4">Discover student artwork, hear each artist explain their creative process, and directly support them through tips.</p>
-                <div class="row g-3 justify-content-center student-gallery-stats">
-                  <div class="col-6 col-md-4">
-                    <div class="student-gallery-stat">
-                      <p class="mb-1 text-primary fw-bold">Artworks</p>
-                      <p class="mb-0 fw-bold">5</p>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-4">
-                    <div class="student-gallery-stat">
-                      <p class="mb-1 text-primary fw-bold">Artists</p>
-                      <p class="mb-0 fw-bold">5</p>
-                    </div>
-                  </div>
-                </div>
+                <p class="mb-3">Discover student artwork, hear each artist explain their creative process, and directly support them through tips.</p>
+                <p class="student-gallery-meta mb-0">5 artworks &middot; 5 student artists</p>
               </div>
             </div>
           </div>
@@ -106,7 +93,6 @@
             <article class="card h-100 shadow card-span student-art-card">
               <div class="student-art-image-wrap">
                 <img src="assets/img/artworks/eainthmuekhin_artwork.jpg" alt="Processing by Eaint Hmue Khin" class="artwork-image" />
-                <span class="badge rounded-pill bg-primary student-art-category">Acrylic</span>
                 <button class="student-art-expand-btn" type="button" data-artwork-src="assets/img/artworks/eainthmuekhin_artwork.jpg" data-artwork-alt="Processing by Eaint Hmue Khin" aria-label="Maximize artwork image for Processing">
                   <span aria-hidden="true">&#x2922;</span>
                 </button>
@@ -131,7 +117,6 @@
             <article class="card h-100 shadow card-span student-art-card">
               <div class="student-art-image-wrap">
                 <img src="assets/img/artworks/ehlawhite_artwork.png" alt="Light Through Leaves by Eh Law White" class="artwork-image" />
-                <span class="badge rounded-pill bg-primary student-art-category">Watercolor</span>
                 <button class="student-art-expand-btn" type="button" data-artwork-src="assets/img/artworks/ehlawhite_artwork.png" data-artwork-alt="Light Through Leaves by Eh Law White" aria-label="Maximize artwork image for Light Through Leaves">
                   <span aria-hidden="true">&#x2922;</span>
                 </button>
@@ -156,7 +141,6 @@
             <article class="card h-100 shadow card-span student-art-card">
               <div class="student-art-image-wrap">
                 <img src="assets/img/artworks/seintphaungpharay_artwork.jpg" alt="Schoolyard Memories by Seint Phaung Pharay" class="artwork-image" />
-                <span class="badge rounded-pill bg-primary student-art-category">Pencil Sketch</span>
                 <button class="student-art-expand-btn" type="button" data-artwork-src="assets/img/artworks/seintphaungpharay_artwork.jpg" data-artwork-alt="Schoolyard Memories by Seint Phaung Pharay" aria-label="Maximize artwork image for Schoolyard Memories">
                   <span aria-hidden="true">&#x2922;</span>
                 </button>
@@ -181,7 +165,6 @@
             <article class="card h-100 shadow card-span student-art-card">
               <div class="student-art-image-wrap">
                 <img src="assets/img/artworks/wahgay_laminnge_artwork.jpg" alt="Skyline Dreams by Wah Gay & Lamin Nge" class="artwork-image" />
-                <span class="badge rounded-pill bg-primary student-art-category">Oil Pastel</span>
                 <button class="student-art-expand-btn" type="button" data-artwork-src="assets/img/artworks/wahgay_laminnge_artwork.jpg" data-artwork-alt="Skyline Dreams by Wah Gay Lamin Nge" aria-label="Maximize artwork image for Skyline Dreams">
                   <span aria-hidden="true">&#x2922;</span>
                 </button>
@@ -206,7 +189,6 @@
             <article class="card h-100 shadow card-span student-art-card">
               <div class="student-art-image-wrap">
                 <img src="assets/img/artworks/zinphyulynn_artwork.jpg" alt="River of Stories by Zin Phyu Lynn" class="artwork-image" />
-                <span class="badge rounded-pill bg-primary student-art-category">Mixed Media</span>
                 <button class="student-art-expand-btn" type="button" data-artwork-src="assets/img/artworks/zinphyulynn_artwork.jpg" data-artwork-alt="River of Stories by Zin Phyu Lynn" aria-label="Maximize artwork image for River of Stories">
                   <span aria-hidden="true">&#x2922;</span>
                 </button>
@@ -259,25 +241,41 @@
 
                 <p class="tip-modal-instruction">Choose your preferred payment method and send a tip directly to the student.</p>
 
-                <div class="tip-payment-card">
-                  <div class="tip-payment-header">
-                    <!-- Place PayPal logo asset at: public/assets/img/icons/paypal-logo.png -->
-                    <img src="assets/img/icons/paypal-logo.png" alt="PayPal logo" class="tip-paypal-logo">
-                    <div>
-                      <p class="mb-0 fw-bold">PayPal</p>
-                      <p class="mb-0 fs--1 text-secondary">Secure direct payment</p>
+                <div class="tip-payment-methods">
+                  <div class="tip-payment-card">
+                    <div class="tip-payment-header">
+                      <!-- Place PayPal logo asset at: public/assets/img/icons/paypal-logo.png -->
+                      <img src="assets/img/icons/paypal-logo.png" alt="PayPal logo" class="tip-payment-logo tip-paypal-logo">
+                      <div>
+                        <p class="mb-0 fw-bold">PayPal</p>
+                        <p class="mb-0 fs--1 text-secondary">Secure direct payment</p>
+                      </div>
+                    </div>
+                    <div class="tip-payment-details">
+                      <p class="mb-1">Payment Link: <a href="#" id="tip-paypal-link" target="_blank" rel="noopener noreferrer"></a></p>
+                      <p class="mb-1">Account Name: <span id="tip-account-name"></span></p>
+                      <p class="mb-0 fs--1 text-secondary">Add student name in payment note.</p>
                     </div>
                   </div>
-                  <div class="tip-payment-details">
-                    <p class="mb-1">Payment Link: <a href="#" id="tip-paypal-link" target="_blank" rel="noopener noreferrer"></a></p>
-                    <p class="mb-1">Account Name: <span id="tip-account-name"></span></p>
-                    <p class="mb-0 fs--1 text-secondary">Add student name in payment note.</p>
+
+                  <div class="tip-payment-card tip-payment-card-wise">
+                    <div class="tip-payment-header">
+                      <img src="assets/img/icons/wise-logo.png" alt="Wise logo" class="tip-payment-logo tip-wise-logo">
+                      <div>
+                        <p class="mb-0 fw-bold">Wise</p>
+                        <p class="mb-0 fs--1 text-secondary">International transfer</p>
+                      </div>
+                    </div>
+                    <div class="tip-payment-details">
+                      <p class="mb-1">Payment Link: <a href="https://wise.com/pay/me/khinet15" id="tip-wise-link" target="_blank" rel="noopener noreferrer">https://wise.com/pay/me/khinet15</a></p>
+                      <p class="mb-0 fs--1 text-secondary">Please include the student or artwork name in your transfer note if possible.</p>
+                    </div>
                   </div>
                 </div>
 
                 <div class="tip-email-card" aria-label="Receipt email instructions">
                   <h4 class="tip-email-title mb-2">Send Your Receipt by Email</h4>
-                  <p class="mb-2">After sending your PayPal tip, please email your receipt and include the student or artwork name.</p>
+                  <p class="mb-2">After sending your tip, please email your receipt and include the student or artwork name.</p>
                   <p class="tip-email-note mb-2">Official Thingaha support inbox:</p>
                   <p class="tip-email-address mb-2"><a href="mailto:hello@thingaha.org">hello@thingaha.org</a></p>
                   <p class="mb-0 fs--1 text-secondary">This helps the Thingaha team confirm and route your support correctly.</p>
