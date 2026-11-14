@@ -148,14 +148,14 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section id="volunteer-body" class="py-0 bg-primary">
+      <section id="volunteer-body" class="py-0 bg-primary site-footer">
         <div class="container">
           <div class="row justify-content-between pb-2 pt-4">
             <div class="col-12 col-lg-auto mb-5 mb-lg-0">
               <a class="d-flex align-items-center fw-semi-bold fs-3" href="#">
                 <img
                   class="me-3 thingaha-footer-logo"
-                  src="assets/img/gallery/footer-logo.png"
+                  src="assets/img/gallery/logo.png"
                   alt="..."
               /></a>
             </div>
@@ -353,7 +353,7 @@
           "Yee Mon Aung",
           "Khin Sabae Han",
           "NoeNo Saw Lwin",
-          "Nor Theigi Aung",
+          "Nor Theingi Aung",
           "Thet Zin Zin",
           "Thinzar Lynn",
           "Khine Su Thein",
@@ -375,7 +375,7 @@
           "Than Htay Aung",
           "Khine Shwe Wah",
           "Khin Sabae Han",
-          "Nor Theigi Aung",
+          "Nor Theingi Aung",
           "Yee Mon Aung",
           "Thandar Khine Aye",
           "Nilar Zaw Min",
@@ -407,7 +407,7 @@
           "Than Htay Aung",
           "Khine Shwe Wah",
           "Khin Sabae Han",
-          "Nor Theigi Aung",
+          "Nor Theingi Aung",
           "Yee Mon Aung",
           "Thandar Khine Aye",
           "Nilar Zaw Min",
@@ -439,7 +439,7 @@
           "Than Htay Aung",
           "Khine Shwe Wah",
           "Khin Sabae Han",
-          "Nor Theigi Aung",
+          "Nor Theingi Aung",
           "Yee Mon Aung",
           "Thandar Khine Aye",
           "Nilar Zaw Min",
@@ -491,7 +491,7 @@
           "Chan Myae San Hlaing",
           "Wint Yee Lwin",
           "Thet Zin Zin",
-          "Nor Theigi Aung",
+          "Nor Theingi Aung",
           "Aye Aye Myint",
           "Thandar Khine Aye",
           "Nan Pyae Nyein Thar",
@@ -551,10 +551,10 @@
           "Khine Wai Oo",
           "Pin Maing Soe",
           "Ei Thingyan Moe",
-          "Nor Theigi Aung",
+          "Nor Theingi Aung",
           "Khaing Wutyi Hnin",
-          "Nyan Lin Aung",
-          "Ma Yee Mon Aung",
+          "Nyan Lin Aung + Yee Mon Aung",
+          "Yee Mon Aung",
           "Ko Thet Hlaing",
           "May Thu Lwin",
           "Thuta Shin Thant",
@@ -583,8 +583,8 @@
           "Pin Maing Soe",
           "Khine Wai Oo",
           "Nor Theingi Aung",
-          "Nyan Lin Aung",
-          "Ma Yee Mon Aung",
+          "Nyan Lin Aung + Yee Mon Aung",
+          "Yee Mon Aung",
           "Khaing Wutyi Hnin",
           "Thireindar Min",
           "Nway Nway Ei",
@@ -602,8 +602,8 @@
           "Nang Ohnmar Thein",
           "Su Myat Noe",
           "Khaing Hsu Wai",
-          "Nyan Lin Aung",
-          "Ma Yee Mon Aung",
+          "Nyan Lin Aung + Yee Mon Aung",
+          "Yee Mon Aung",
           "Yee Mon Aung",
           "May Khine Nyein",
           "Nor Theingi Aung",
@@ -625,6 +625,40 @@
           "Mya Thuzar Lwyn",
           "Ei Nay Chi Khaing",
           "NoeNo Saw Lwin"
+        ],
+        "2026": [
+          "Tara Chan Myae",
+          "Thandar Khine Aye",
+          "Yee Mon Aung",
+          "Nor Theingi Aung",
+          "Nang Ohnmar Thein",
+          "Su Myat Noe",
+          "Eaint Cho Tun",
+          "Khaing Hsu Wai",
+          "Phyo Phyo San",
+          "Phyu Phyu Kyaw",
+          "Khaing Wyut Hmone",
+          "Nilar Zaw Min",
+          "Set Kyar Wa Lar",
+          "Poe Ei Phyu",
+          "Wint Yee Lwin",
+          "May Khine Nyein",
+          "Hsu Hnin Wai",
+          "Thinzar Lynn",
+          "Ei Thingyan Moe",
+          "Thaw Thaw",
+          "Suzy",
+          "Yu Yu Hlaing",
+          "Aye Mon Yadanar Aung",
+          "Khaing Wutyi Hnin",
+          "Nway Nway Ei",
+          "Yeh Mon Khaing",
+          "Eindray Pann",
+          "Gemini family",
+          "Ei Ei Phyo",
+          "Lachie",
+          "Nyan Lin Aung + Yee Mon Aung",
+          "Terry (Tin Aung Myint)"
         ]
       };
 
@@ -636,7 +670,8 @@
         const volunteers = volunteerData[year];
         volunteers.forEach(volunteer => {
           if (volunteerMap.has(volunteer)) {
-            volunteerMap.get(volunteer).push(parseInt(year));
+            const years = volunteerMap.get(volunteer);
+            if (!years.includes(parseInt(year))) years.push(parseInt(year));
           } else {
             volunteerMap.set(volunteer, [parseInt(year)]);
           }

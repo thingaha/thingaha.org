@@ -1,19 +1,40 @@
-$(document).ready(function () {
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-      $("#scroll-top-button").fadeIn().show();
-    } else {
-      $("#scroll-top-button").fadeOut().hide();
-    }
-  });
+/* Scroll-to-top button (no jQuery dependency). */
+(function () {
+  'use strict';
 
-  $("#scroll-top-button").click(function () {
-    $("html, body").animate(
-      {
-        scrollTop: 0,
-      },
-      500
-    );
-    return false;
-  });
-});
+  function init() {
+    var button = document.getElementById('scroll-top-button');
+    if (!button) return;
+
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var ticking = false;
+
+    function update() {
+      button.classList.toggle('is-visible', window.scrollY > 300);
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    }, { passive: true });
+
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      var top = document.getElementById('top') || document.body;
+      if (top.tabIndex < 0) top.setAttribute('tabindex', '-1');
+      top.focus({ preventScroll: true });
+    });
+
+    update();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();

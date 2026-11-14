@@ -91,7 +91,7 @@ var grays = {
 };
 
 var hasClass = function hasClass(el, className) {
-  !el && false;
+  if (!el) return false;
   return el.classList.value.includes(className);
 };
 
@@ -330,18 +330,19 @@ var navbarInit = function navbarInit() {
         navbar.style.transition = utils.hasClass(navbarCollapse, 'show') ? transition : 'none';
       }
     });
-    navbarCollapse.addEventListener(Events.SHOW_BS_COLLAPSE, function () {
+    // Report pages have no collapsible menu.
+    navbarCollapse && navbarCollapse.addEventListener(Events.SHOW_BS_COLLAPSE, function () {
       navbar.classList.add(bgClassName);
       navbar.classList.add(shadowName);
       navbar.style.backgroundImage = backgroundImage;
       navbar.style.transition = transition;
     });
-    navbarCollapse.addEventListener(Events.HIDE_BS_COLLAPSE, function () {
+    navbarCollapse && navbarCollapse.addEventListener(Events.HIDE_BS_COLLAPSE, function () {
       navbar.classList.remove(bgClassName);
       navbar.classList.remove(shadowName);
       !html.scrollTop && (navbar.style.backgroundImage = 'none');
     });
-    navbarCollapse.addEventListener(Events.HIDDEN_BS_COLLAPSE, function () {
+    navbarCollapse && navbarCollapse.addEventListener(Events.HIDDEN_BS_COLLAPSE, function () {
       navbar.style.transition = 'none';
     });
   }
